@@ -62,22 +62,43 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        {/* <Header>
+      <ScrollView>
+        <Header style={styles.header}>
           Muddassir
-        </Header> */}
+        </Header>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section  title="Name">
-             <Text style={styles.highlight}>Muddassir Khan</Text> 
+          <Section title="Summmary">
+            <Text style={styles.highlight}>
+              Senior Web Developer specializing in front end
+              development. Experienced with all stages of the
+              development cycle for dynamic web projects.
+              Well-versed in numerous programming languages
+              including HTML5, PHP OOP, JavaScript, CSS, MySQL.
+              Strong background in project management and customer
+              relations.</Text>
           </Section>
-          <Section  title="Education">
-             <Text style={styles.highlight}>Intermediate</Text> 
+          <Section title="Skill Highlights">
+            <Text style={styles.highlight}>
+              •	Project management
+            </Text>
           </Section>
+          <Section title="Experience">
+            <Text style={styles.highlight}>
+              Web Developer & Mobile App Developement
+            </Text>
+            - 08/2020 to 4/2021
+          </Section>
+          <Section title="Education">
+            Bachelor of Science: <Text style={styles.highlight}>
+              Computer Science
+            </Text> 2023 <Text style={styles.highlight}>
+               Fedral Urdu University of Arts Science and Technology,
+            </Text> NY
+          </Section>
+
           {/* <Section title="See Your Changes">
             <ReloadInstructions />
           </Section> */}
@@ -96,15 +117,19 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
 
-  
+
   sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  header: {
     marginTop: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
     color: "white",
-    fontSize: 29,
-    fontWeight: '600',
+    fontSize: 35,
+    fontWeight: '900',
     // backgroundColor: "red",
   },
   sectionDescription: {
